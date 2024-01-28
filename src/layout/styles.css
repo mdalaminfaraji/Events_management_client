@@ -1,0 +1,13 @@
+.text-gradient {
+  background: linear-gradient(276deg, #5a01cb 37.08%, #fe8900 57.18%);
+  -webkit-background-clip: text;
+  /* -webkit-text-fill-color: transparent; */
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  font-family: Roboto;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 110%;
+}
