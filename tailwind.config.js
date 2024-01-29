@@ -19,6 +19,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         "hero-bg": "url('/src/assets/home/bg.png')",
+        "service-bg": "url('/src/assets/service/bg_service.png')",
       },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
