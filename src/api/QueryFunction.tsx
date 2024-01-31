@@ -1,0 +1,7 @@
+import axios from "axios";
+
+export const getRecentEvents = async () => {
+  return await axios.get(
+    "https://events-management-nsnv.onrender.com/api/events/"
+  );
+};

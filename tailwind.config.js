@@ -20,6 +20,7 @@ module.exports = {
       backgroundImage: {
         "hero-bg": "url('/src/assets/home/bg.png')",
         "service-bg": "url('/src/assets/service/bg_service.png')",
+        "footer-bg": "url('/src/assets/home/bg _footer.png')",
       },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
