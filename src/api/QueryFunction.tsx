@@ -11,3 +11,7 @@ export const getEventItems = async () => {
     "https://events-management-nsnv.onrender.com/api/eventItem/"
   );
 };
+
+export const getOurServices = async () => {
+  return await axios.get("http://127.0.0.1:8000/api/services/");
+};

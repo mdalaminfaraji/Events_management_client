@@ -13,7 +13,7 @@ const Home = () => {
     <div className="max-w-[1440px]  mx-auto  ">
       <Navbar />
       <OurClient />
-      <div className="bg-service-bg py-12 lg:h-[5786px] px-10">
+      <div className="bg-service-bg py-12 px-10">
         <OurServices />
         <EventItems />
         <PricingPlan />
@@ -21,7 +21,7 @@ const Home = () => {
         <Testimonial />
         <RecentEvent />
       </div>
-      <div className="bg-footer-bg md:h-[420px] ">
+      <div className="bg-footer-bg  ">
         <Footer />
       </div>
     </div>

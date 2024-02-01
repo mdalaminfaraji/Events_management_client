@@ -3,8 +3,8 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 const Testimonial = () => {
   return (
     <div>
-      <div className="flex justify-between mt-24">
-        <h1 className="text-start text-6xl font-bold">
+      <div className="flex justify-between flex-col md:flex-row mt-24">
+        <h1 className="text-start text-4xl md:text-5xl lg:text-6xl font-bold">
           What Our Client Said About Us
         </h1>
         <div className="flex mt-5 gap-3">
@@ -16,8 +16,8 @@ const Testimonial = () => {
           </div>
         </div>
       </div>
-      <div className="flex gap-4 relative mt-20">
-        <div className="w-[513px] h-[312px] border-2 rounded-2xl p-10 bg-[#3461FF] font-roboto">
+      <div className="flex flex-col lg:flex-row gap-4  relative mt-20">
+        <div className="max-w-[513px] h-[312px] border-2 rounded-2xl p-10 bg-[#3461FF] font-roboto">
           <div className="flex ">
             <div className="w-[85px] h-[85px] rounded-full mr-4">
               <img src="/src/assets/testimonial/t1.png" />
@@ -33,7 +33,7 @@ const Testimonial = () => {
             and the results were beyond my expectations.
           </div>
         </div>
-        <div className="w-[513px] h-[312px] border-2 rounded-2xl p-10 bg-[#F8F9FF] font-roboto">
+        <div className="max-w-[513px] h-[312px] border-2 rounded-2xl p-10 bg-[#F8F9FF] font-roboto">
           <div className="flex">
             <div className="w-[85px] h-[85px] rounded-full mr-4">
               <img src="/src/assets/testimonial/t2.png" />
@@ -49,7 +49,7 @@ const Testimonial = () => {
             and the results were beyond my expectations.
           </div>
         </div>
-        <div className="w-[513px] h-[280px] border-2 rounded-2xl p-10 bg-[#F8F9FF] font-roboto ">
+        <div className="max-w-[513px] h-[280px] border-2 rounded-2xl p-10 bg-[#F8F9FF] font-roboto ">
           <div className="flex">
             <div className="w-[85px] h-[85px] rounded-full mr-4">
               <img src="/src/assets/testimonial/t3.png" />

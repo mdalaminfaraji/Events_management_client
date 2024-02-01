@@ -5,7 +5,7 @@ import { BsCheck } from "react-icons/bs";
 const PricingPlan = () => {
   return (
     <div className="font-roboto mt-[123px]">
-      <h1 className="w-[872px] mx-auto text-6xl font-bold text-center">
+      <h1 className="max-w-[872px] mx-auto text-4xl md:text-6xl font-bold text-center">
         Explore our pricing plans
       </h1>
       <p className="text-center max-w-[1086px] mx-auto mt-8 text-lg text-[#566B84]">
@@ -14,7 +14,7 @@ const PricingPlan = () => {
         posuere felis arcu tellus tempus in in ultricies. Gravida id nibh ornare
         viverra. Ultrices faucibus neque velit risus ac id lorem.
       </p>
-      <div className="mt-[106px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center font-[Inter] ">
+      <div className="mt-[106px] grid grid-cols-1  lg:grid-cols-3 gap-4 justify-items-center font-[Inter] ">
         <div
           className="w-[412px] h-[748px] py-8 pl-8 pr-5    rounded-[20px] shadow bg-[#FFF]  relative"
           style={{ borderTop: "6px solid #F249C8" }}

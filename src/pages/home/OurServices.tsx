@@ -1,8 +1,30 @@
+import { Button } from "@/components/ui/button";
+import useOurServices from "@/hooks/useOurServices";
 import { CheckCircle2 } from "lucide-react";
-import React, { useState } from "react";
+import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
+type serviceType = {
+  title: string;
+  servicesImage: string;
+  description: string;
+  features: string[];
+};
+type obj = {
+  title: string;
+  description: string;
+};
 const OurServices = () => {
-  const [hovered, setHovered] = useState(false);
+  const [hoveredItem, setHoveredItem] = useState<obj | null>(null);
+  const { data: Services, isLoading, isError } = useOurServices();
+  if (isLoading) {
+    return <p>Loading.......</p>;
+  }
+
+  if (isError) {
+    return <p>Something went wrong..................</p>;
+  }
+
   return (
     <div className="font-roboto ">
       <h1 className="w-96 mx-auto text-6xl font-bold ">Our Services</h1>
@@ -10,97 +32,57 @@ const OurServices = () => {
         Ut posuere felis arcu tellus tempus in in ultricies. Gravida id nibh
         ornare viverra. Ultrices faucibus neque velit risus ac id lorem.
       </p>
-      <div className="mt-14 font-roboto grid grid-cols-1 lg:grid-cols-3 gap-x-5 justify-items-center">
-        <div className="w-[412px] h-[569px] p-6 rounded-md bg-gradient-to-tr from-[#EDDDF1] to-[#efebef]">
-          <img
-            src="/src/assets/service/service1.png"
-            className="w-[362px] h-[253px]"
-          />
+      <div className="mt-14 font-roboto grid grid-cols-1  xl:grid-cols-3 gap-5 justify-items-center">
+        {Services?.data.map(
+          (
+            { title, servicesImage, description, features }: serviceType,
+            index: number
+          ) => (
+            <div
+              key={uuidv4()}
+              className={`w-[412px] h-[569px] p-6 rounded-md bg-gradient-to-tr ${
+                index == 0
+                  ? `from-[#EDDDF1] to-[#efebef]`
+                  : index == 1
+                  ? "from-[#F0ECF1] to-[#DEF0EE]"
+                  : "from-[#C3EDEA] to-[#E8F1F0]"
+              } `}
+              onMouseEnter={() => setHoveredItem({ title, description })}
+              onMouseLeave={() => setHoveredItem(null)}
+            >
+              {hoveredItem && hoveredItem.title === title ? (
+                <>
+                  <h3 className="mb-3 text-3xl font-bold">{title}</h3>
+                  <p className="text-base text-[#566B84] mb-8">
+                    {hoveredItem.description}
+                  </p>
+                </>
+              ) : (
+                <img src={servicesImage} className="w-[362px] h-[253px]" />
+              )}
+              {hoveredItem && hoveredItem.title === title ? (
+                ""
+              ) : (
+                <h3 className="mt-6 text-3xl font-bold">{title}</h3>
+              )}
 
-          <h3 className="mt-6 text-3xl font-bold">Corporate event</h3>
-          <div className="mt-3">
-            <p className="flex items-center">
-              <CheckCircle2 className="w-4 h-4 bg-white rounded-full text-[#6FCF97]" />
-              <span className="ml-2">One day pas access all lecture</span>
-            </p>
-            <p className="flex items-center">
-              <CheckCircle2 className="w-4 h-4 bg-white rounded-full text-[#6FCF97] my-4" />
-              <span className="ml-2">One day pas access all lecture</span>
-            </p>
-            <p className="flex items-center">
-              <CheckCircle2 className="w-4 h-4 bg-white rounded-full text-[#6FCF97] my-4" />
-              <span className="ml-2">One day pas access all lecture</span>
-            </p>
-            <p className="flex items-center">
-              <CheckCircle2 className="w-4  h-4 bg-white rounded-full text-[#6FCF97] my-4" />
-              <span className="ml-2">One day pas access all lecture</span>
-            </p>
-            <p className="flex items-center">
-              <CheckCircle2 className="w-4  h-4 bg-white rounded-full text-[#6FCF97] my-4" />
-              <span className="ml-2">One day pas access all lecture</span>
-            </p>
-          </div>
-        </div>
-        <div className="w-[412px] h-[569px] p-6 rounded-md bg-gradient-to-tr from-[#EDDDF1] to-[#efebef] ">
-          <img
-            src="/src/assets/service/service2.png"
-            className="w-[362px] h-[253px]"
-          />
+              <div className="mt-3">
+                {features.map((item) => (
+                  <p key={uuidv4()} className="flex items-center">
+                    <CheckCircle2 className="w-4 h-4 bg-white rounded-full mb-4 text-[#6FCF97]" />
+                    <span className="ml-2 mb-4">{item}</span>
+                  </p>
+                ))}
+              </div>
 
-          <h3 className="mt-6 text-3xl font-bold">Corporate event</h3>
-          <div className="mt-3">
-            <p className="flex items-center">
-              <CheckCircle2 className="w-4 h-4 bg-white rounded-full text-[#6FCF97]" />
-              <span className="ml-2">One day pas access all lecture</span>
-            </p>
-            <p className="flex items-center">
-              <CheckCircle2 className="w-4 h-4 bg-white rounded-full text-[#6FCF97] my-4" />
-              <span className="ml-2">One day pas access all lecture</span>
-            </p>
-            <p className="flex items-center">
-              <CheckCircle2 className="w-4 h-4 bg-white rounded-full text-[#6FCF97] my-4" />
-              <span className="ml-2">One day pas access all lecture</span>
-            </p>
-            <p className="flex items-center">
-              <CheckCircle2 className="w-4  h-4 bg-white rounded-full text-[#6FCF97] my-4" />
-              <span className="ml-2">One day pas access all lecture</span>
-            </p>
-            <p className="flex items-center">
-              <CheckCircle2 className="w-4  h-4 bg-white rounded-full text-[#6FCF97] my-4" />
-              <span className="ml-2">One day pas access all lecture</span>
-            </p>
-          </div>
-        </div>
-        <div className="w-[412px] h-[569px] p-6 rounded-md bg-gradient-to-tr from-[#EDDDF1] to-[#efebef] ">
-          <img
-            src="/src/assets/service/service1.png"
-            className="w-[362px] h-[253px]"
-          />
-
-          <h3 className="mt-6 text-3xl font-bold">Corporate event</h3>
-          <div className="mt-3">
-            <p className="flex items-center">
-              <CheckCircle2 className="w-4 h-4 bg-white rounded-full text-[#6FCF97]" />
-              <span className="ml-2">One day pas access all lecture</span>
-            </p>
-            <p className="flex items-center">
-              <CheckCircle2 className="w-4 h-4 bg-white rounded-full text-[#6FCF97] my-4" />
-              <span className="ml-2">One day pas access all lecture</span>
-            </p>
-            <p className="flex items-center">
-              <CheckCircle2 className="w-4 h-4 bg-white rounded-full text-[#6FCF97] my-4" />
-              <span className="ml-2">One day pas access all lecture</span>
-            </p>
-            <p className="flex items-center">
-              <CheckCircle2 className="w-4  h-4 bg-white rounded-full text-[#6FCF97] my-4" />
-              <span className="ml-2">One day pas access all lecture</span>
-            </p>
-            <p className="flex items-center">
-              <CheckCircle2 className="w-4  h-4 bg-white rounded-full text-[#6FCF97] my-4" />
-              <span className="ml-2">One day pas access all lecture</span>
-            </p>
-          </div>
-        </div>
+              {hoveredItem && hoveredItem.title === title ? (
+                <Button className="w-full mt-12">Check it out</Button>
+              ) : (
+                ""
+              )}
+            </div>
+          )
+        )}
       </div>
     </div>
   );

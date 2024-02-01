@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 const Footer = () => {
   return (
-    <div className="px-20 bg-black opacity-75 text-white md:h-[420px]">
+    <div className="px-20 bg-black opacity-75 text-white ">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 py-12">
         <div className="text-3xl font-bold">
           Event<span className="text-[#3461FF] ml-1">360</span>
@@ -48,7 +48,7 @@ const Footer = () => {
         </div>
       </div>
       <hr />
-      <div className="flex justify-between  my-6">
+      <div className="flex justify-between flex-col lg:flex-row  py-4">
         <div>
           <p> @ 2023. All rights reserved.</p>
         </div>

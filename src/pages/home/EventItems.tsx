@@ -19,7 +19,7 @@ const EventItems = () => {
   const { title: title6, image: image6 } = data?.data[5];
 
   return (
-    <div className="font-roboto mt-32">
+    <div className="font-roboto mt-32 max-w-[1250px] mx-auto">
       <h1 className="w-96 mx-auto text-6xl font-bold ">Event Items</h1>
       <p className="text-center max-w-[700px] mx-auto mt-3 mb-14 text-lg text-[#566B84]">
         Ut posuere felis arcu tellus tempus in in ultricies. Gravida id nibh
@@ -28,7 +28,7 @@ const EventItems = () => {
 
       <div className="grid grid-cols-3 md:grid-cols-12 xl:grid-cols-12 gap-4 ">
         {/* First column */}
-        <div className="col-span-3 md:col-span-6 xl:col-span-4 justify-self-center">
+        <div className="col-span-3 md:col-span-12 xl:col-span-4 justify-self-center">
           <div className="mb-4 bg-gray-200 p-4">
             <img
               src={`https://events-management-nsnv.onrender.com/${image1.image}`}
@@ -57,7 +57,7 @@ const EventItems = () => {
         </div>
 
         {/* Second column */}
-        <div className="col-span-3 md:col-span-6 xl:col-span-4 justify-self-center ">
+        <div className="col-span-3 md:col-span-12 xl:col-span-4 justify-self-center ">
           <div className="bg-gray-200 p-4">
             {/* First row, second column */}
             <div>
