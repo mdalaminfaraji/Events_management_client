@@ -5,3 +5,9 @@ export const getRecentEvents = async () => {
     "https://events-management-nsnv.onrender.com/api/events/"
   );
 };
+
+export const getEventItems = async () => {
+  return await axios.get(
+    "https://events-management-nsnv.onrender.com/api/eventItem/"
+  );
+};
