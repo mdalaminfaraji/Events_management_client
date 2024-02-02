@@ -29,18 +29,18 @@ const Navbar = () => {
             imperdiet sed id elementum. Quam vel aliquam sit vulputate. Faucibus
             nec gravida ipsum pulvinar vel non.
           </p>
-          <Button className="w-48 h-12 text-base">Explore</Button>
+          <Button className="w-40 md:w-48 md:h-12 text-base">Explore</Button>
         </div>
-        <div className="w-[400px] h-[500px] mt-16 md:mt-1 md:w-[350px] md:h-[440px] lg:w-[450px] lg:h-[600px] xl:w-[584px] xl:h-[754px]  py-14 px-12 border border-black rounded-full relative order-1 md:order-2 mx-auto">
-          <div className=" absolute left-2 md:-left-2 lg:left-2 w-[50px] md:w-[65px] lg:w-[65px] xl:w-[140px]">
+        <div className="w-[300px] h-[400px] sm:w-[350px] sm:h-[450px] mt-16 md:mt-1 md:w-[350px] md:h-[440px] lg:w-[450px] lg:h-[600px] xl:w-[584px] xl:h-[754px]  py-14 px-12 border border-black rounded-full relative order-1 md:order-2 mx-auto">
+          <div className=" absolute -left-2 sm:left-0 md:-left-2 lg:left-2 w-[50px] md:w-[65px] lg:w-[65px] xl:w-[140px]">
             <img src="/src/assets/home/Star 6.png" />
           </div>
           <div>
-            <div className="w-[300px] h-[400px] md:w-[260px] md:h-[360px] lg:w-[360px] lg:h-[560px] xl:w-[490px] xl:h-[632px] ">
+            <div className="w-[200px] h-[300px] sm:w-[250px] sm:h-[400px] md:w-[260px] md:h-[360px] lg:w-[360px] lg:h-[560px] xl:w-[490px] xl:h-[632px] ">
               <img src="/src/assets/home/banner.png" className="rounded-full" />
             </div>
           </div>
-          <div className=" absolute right-6 bottom-10 md:right-2 md:bottom-6 lg:right-10 lg:bottom-6 xl:right-4 xl:bottom-1 w-[50px] md:w-[65px] lg:w-[65px] xl:w-[140px] ">
+          <div className=" absolute right-0 sm:right-3 bottom-10 md:right-2 md:bottom-6 lg:right-10 lg:bottom-6 xl:right-4 xl:bottom-1 w-[50px] md:w-[65px] lg:w-[65px] xl:w-[140px] ">
             <img src="/src/assets/home/Soft Star.png" />
           </div>
         </div>

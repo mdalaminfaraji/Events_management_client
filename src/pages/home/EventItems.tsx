@@ -20,7 +20,9 @@ const EventItems = () => {
 
   return (
     <div className="font-roboto mt-32 max-w-[1250px] mx-auto">
-      <h1 className="w-96 mx-auto text-6xl font-bold ">Event Items</h1>
+      <h1 className="w-72 sm:w-96 mx-auto text-5xl sm:text-6xl font-bold ">
+        Event Items
+      </h1>
       <p className="text-center max-w-[700px] mx-auto mt-3 mb-14 text-lg text-[#566B84]">
         Ut posuere felis arcu tellus tempus in in ultricies. Gravida id nibh
         ornare viverra. Ultrices faucibus neque velit risus ac id lorem.
