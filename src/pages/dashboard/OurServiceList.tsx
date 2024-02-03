@@ -42,7 +42,9 @@ const OurServiceList = () => {
   const queryClient = useQueryClient();
   const mutation = useMutation({
     mutationFn: async (id: number) => {
-      return await axios.delete(`http://127.0.0.1:8000/api/services/${id}`);
+      return await axios.delete(
+        `https://events-management-nsnv.onrender.com/api/services/${id}/`
+      );
     },
     onSuccess: () => {
       Swal.fire({
@@ -95,21 +97,21 @@ const OurServiceList = () => {
       confirmButtonText: "Yes, delete it!",
     }).then(async (result) => {
       if (result.isConfirmed) {
-        await axios
-          .delete(
-            `https://events-management-nsnv.onrender.com/api/services/${id}`
-          )
-          .then((data) => {
-            console.log(data);
-          });
+        // await axios
+        //   .delete(
+        //     `https://events-management-nsnv.onrender.com/api/services/${id}/`
+        //   )
+        //   .then((data) => {
+        //     console.log(data);
+        //   });
 
-        // mutation.mutate(id);
+        mutation.mutate(id);
 
-        Swal.fire({
-          title: "Deleted!",
-          text: "Your file has been deleted.",
-          icon: "success",
-        });
+        // Swal.fire({
+        //   title: "Deleted!",
+        //   text: "Your file has been deleted.",
+        //   icon: "success",
+        // });
       }
     });
   };

@@ -1,0 +1,46 @@
+import { MailMinus, Map, PhoneOutgoing } from "lucide-react";
+
+const Contact = () => {
+  return (
+    <div className="my-12 container font-roboto">
+      <h1 className="text-center text-5xl font-bold">Contact Us</h1>
+      <p className="text-center text-base text-gray-600 my-4">
+        Contact us if you need our services. We will be happy <br />
+        to make your events memorable!
+      </p>
+      <div className="grid grid-cols-1  lg:grid-cols-3 justify-items-center gap-4">
+        <div className="w-96 h-44 p-12 bg-[#01CB93] text-white rounded-tl-xl rounded-br-xl">
+          <div className="text-end ">
+            <Map className="inline font-bold" />
+          </div>
+          <div>
+            <p className="text-lg font-semibold">Address</p>
+            <p className="text-lg font-semibold">
+              38-2 Hilton Street, California
+            </p>
+          </div>
+        </div>
+        <div className="w-96 h-44 p-12 bg-[#0170CB] text-white rounded-tl-xl rounded-br-xl bg-opacity-70">
+          <div className="text-end ">
+            <PhoneOutgoing className="inline font-bold" />
+          </div>
+          <div>
+            <p className="text-lg font-semibold">Phone</p>
+            <p className="text-lg font-semibold">(+01) 123 456 7890</p>
+          </div>
+        </div>
+        <div className="w-96 h-44 p-12 bg-[#555555] text-white rounded-tl-xl rounded-br-xl bg-opacity-80">
+          <div className="text-end ">
+            <MailMinus className="inline font-bold" />
+          </div>
+          <div>
+            <p className="text-lg font-semibold">Email</p>
+            <p className="text-lg font-semibold">inform@dvents.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Contact;

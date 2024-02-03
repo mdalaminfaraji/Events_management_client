@@ -33,7 +33,7 @@ const EditServiceForm: React.FC<ServiceFormProps> = ({ service }) => {
       return axios.put(
         `https://events-management-nsnv.onrender.com/api/services/${parseInt(
           service.id
-        )}`,
+        )}/`,
         formData,
         {
           headers: {

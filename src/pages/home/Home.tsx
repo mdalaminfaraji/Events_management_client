@@ -9,6 +9,8 @@ import RecentEvent from "./RecentEvent";
 import Footer from "./Footer";
 import { motion, useScroll } from "framer-motion";
 import "../../layout/styles.css";
+import FAQ from "./FAQ";
+import Contact from "./Contact";
 
 const Home = () => {
   const { scrollYProgress } = useScroll();
@@ -29,8 +31,10 @@ const Home = () => {
         <Gallery />
         <Testimonial />
         <RecentEvent />
+        <FAQ />
+        <Contact />
       </div>
-      <div className="bg-footer-bg  ">
+      <div className="bg-footer-bg ">
         <Footer />
       </div>
     </div>
