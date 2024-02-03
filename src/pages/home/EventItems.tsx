@@ -1,6 +1,5 @@
 /* eslint-disable no-unsafe-optional-chaining */
 import useEventsItem from "@/hooks/useEventsItem";
-import React from "react";
 
 const EventItems = () => {
   const { data, isLoading, isError } = useEventsItem();

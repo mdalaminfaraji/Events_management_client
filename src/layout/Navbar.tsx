@@ -1,19 +1,72 @@
 import { Button } from "@/components/ui/button";
 import { NavLink } from "react-router-dom";
 import "./styles.css";
+import { useState } from "react";
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleNavbar = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <div className="bg-hero-bg w-full py-6 px-6 sm:px-20">
-      <nav className="flex justify-between items-center font-roboto font-bold">
-        <div className="inline-flex text-2xl md:text-3xl">
-          Event <span className="ml-2 text-[#3461FF]">360</span>
+      <nav>
+        <div className="flex justify-between items-center font-roboto font-bold">
+          <div className="inline-flex text-2xl md:text-3xl">
+            Event <span className="ml-2 text-[#3461FF]">360</span>
+          </div>
+          <div className="lg:hidden">
+            <button onClick={toggleNavbar}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-black"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                {isOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16m-7 6h7"
+                  />
+                )}
+              </svg>
+            </button>
+          </div>
+          <ul className="hidden lg:flex  space-x-5 text-base gap-2">
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/about">About</NavLink>
+            <NavLink to="/">Contact</NavLink>
+            <NavLink to="/dashboard">Dashboard</NavLink>
+          </ul>
         </div>
-        <ul className="space-x-5 text-base gap-2">
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/">Contact</NavLink>
-        </ul>
+        {isOpen && (
+          <div className="lg:hidden mt-4">
+            <a href="#" className="block  py-2">
+              Home
+            </a>
+            <a href="#" className="block  py-2">
+              About
+            </a>
+            <a href="#" className="block  py-2">
+              Services
+            </a>
+            <a href="#" className="block  py-2">
+              Contact
+            </a>
+          </div>
+        )}
       </nav>
+
       {/* hero section */}
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-4 justify-center items-center ">
         <div className="order-2 md:order-1">

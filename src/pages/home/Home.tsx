@@ -9,6 +9,7 @@ import RecentEvent from "./RecentEvent";
 import Footer from "./Footer";
 import { motion, useScroll } from "framer-motion";
 import "../../layout/styles.css";
+
 const Home = () => {
   const { scrollYProgress } = useScroll();
 
@@ -18,6 +19,7 @@ const Home = () => {
         className="progress-bar"
         style={{ scaleX: scrollYProgress }}
       />
+
       <Navbar />
       <OurClient />
       <div className="bg-service-bg py-12 px-10">
