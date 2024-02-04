@@ -21,7 +21,7 @@ const Contact = () => {
       <div className="grid grid-cols-1  lg:grid-cols-3 justify-items-center gap-4">
         <div
           data-aos="fade-up"
-          className="w-96 h-44 p-12 bg-[#01CB93] text-white rounded-tl-xl rounded-br-xl"
+          className="w-[360px] h-44 p-12 bg-[#01CB93] text-white rounded-tl-xl rounded-br-xl"
         >
           <div className="text-end ">
             <Map className="inline font-bold" />
@@ -35,7 +35,7 @@ const Contact = () => {
         </div>
         <div
           data-aos="zoom-in"
-          className="w-96 h-44 p-12 bg-[#0170CB] text-white rounded-tl-xl rounded-br-xl bg-opacity-70"
+          className="w-[360px] h-44 p-12 bg-[#0170CB] text-white rounded-tl-xl rounded-br-xl bg-opacity-70"
         >
           <div className="text-end ">
             <PhoneOutgoing className="inline font-bold" />
@@ -47,7 +47,7 @@ const Contact = () => {
         </div>
         <div
           data-aos="flip-right"
-          className="w-96 h-44 p-12 bg-[#555555] text-white rounded-tl-xl rounded-br-xl bg-opacity-80"
+          className="w-[360px] h-44 p-12 bg-[#555555] text-white rounded-tl-xl rounded-br-xl bg-opacity-80"
         >
           <div className="text-end ">
             <MailMinus className="inline font-bold" />

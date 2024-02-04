@@ -17,29 +17,29 @@ const Testimonial = () => {
         </div>
       </div>
       <div className="flex flex-col lg:flex-row gap-4  relative mt-20">
-        <div className="max-w-[513px] h-[312px] border-2 rounded-2xl p-10 bg-[#3461FF] font-roboto">
+        <div className="max-w-[513px] h-[312px] border-2 rounded-2xl p-10 text-black hover:text-white bg-[#F8F9FF] hover:bg-[#3461FF] font-roboto">
           <div className="flex ">
             <div className="w-[85px] h-[85px] rounded-full mr-4">
               <img src="/assets/testimonial/t1.png" />
             </div>
             <div>
-              <h1 className="text-white text-2xl font-[500]">Amelia Joseph</h1>
-              <p className="text-white">Chief Manager</p>
+              <h1 className=" text-2xl font-[500]">Amelia Joseph</h1>
+              <p className="">Chief Manager</p>
             </div>
           </div>
-          <div className="text-white text-base mt-5">
+          <div className="text-base mt-5">
             My vision came alive effortlessly. Their blend of casual and
             professional approach made the process a breeze. Creativity flowed,
             and the results were beyond my expectations.
           </div>
         </div>
-        <div className="max-w-[513px] h-[312px] border-2 rounded-2xl p-10 bg-[#F8F9FF] font-roboto">
+        <div className="max-w-[513px] h-[312px] border-2 rounded-2xl p-10 text-black hover:text-white bg-[#F8F9FF] hover:bg-[#3461FF]  font-roboto">
           <div className="flex">
             <div className="w-[85px] h-[85px] rounded-full mr-4">
               <img src="/assets/testimonial/t2.png" />
             </div>
             <div>
-              <h1 className=" text-2xl font-[500]">Amelia Joseph</h1>
+              <h1 className=" text-2xl font-[500] ">Amelia Joseph</h1>
               <p className="">Chief Manager</p>
             </div>
           </div>
@@ -49,7 +49,7 @@ const Testimonial = () => {
             and the results were beyond my expectations.
           </div>
         </div>
-        <div className="max-w-[513px] h-[280px] border-2 rounded-2xl p-10 bg-[#F8F9FF] font-roboto ">
+        <div className="max-w-[513px] h-[280px] border-2 rounded-2xl p-10 text-black hover:text-white bg-[#F8F9FF] hover:bg-[#3461FF]  font-roboto ">
           <div className="flex">
             <div className="w-[85px] h-[85px] rounded-full mr-4">
               <img src="/assets/testimonial/t3.png" />
