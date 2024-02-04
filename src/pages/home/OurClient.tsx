@@ -6,34 +6,34 @@ const OurClient = () => {
       </h1>
       <div className="grid grid-cols-4 md:grid-cols-6  lg:grid-cols-10 gap-y-20 justify-items-center">
         <div className=" col-span-2 w-28">
-          <img src="/src/assets/our_client/adobe.png" />
+          <img src="/assets/our_client/adobe.png" />
         </div>
         <div className=" col-span-2 w-28">
-          <img src="/src/assets/our_client/amazon.png" />
+          <img src="/assets/our_client/amazon.png" />
         </div>
         <div className=" col-span-2 w-28">
-          <img src="/src/assets/our_client/asana.png" />
+          <img src="/assets/our_client/asana.png" />
         </div>
         <div className=" col-span-2 w-28">
-          <img src="/src/assets/our_client/evernote.png" />
+          <img src="/assets/our_client/evernote.png" />
         </div>
         <div className=" col-span-2 w-28">
-          <img src="/src/assets/our_client/google.png" />
+          <img src="/assets/our_client/google.png" />
         </div>
         <div className=" col-span-2 w-36">
-          <img src="/src/assets/our_client/microsoft.png" />
+          <img src="/assets/our_client/microsoft.png" />
         </div>
         <div className=" col-span-2 w-28">
-          <img src="/src/assets/our_client/paypal.png" />
+          <img src="/assets/our_client/paypal.png" />
         </div>
         <div className=" col-span-2 w-28">
-          <img src="/src/assets/our_client/shopify.png" />
+          <img src="/assets/our_client/shopify.png" />
         </div>
         <div className=" col-span-2 w-28">
-          <img src="/src/assets/our_client/uber.png" />
+          <img src="/assets/our_client/uber.png" />
         </div>
         <div className=" col-span-2 w-28">
-          <img src="/src/assets/our_client/spotify.png" />
+          <img src="/assets/our_client/spotify.png" />
         </div>
       </div>
     </div>

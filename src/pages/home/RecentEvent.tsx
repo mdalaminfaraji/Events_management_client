@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Button } from "@/components/ui/button";
 import useRecentEvents from "@/hooks/useRecentEvents";
-
+import { v4 as uuidv4 } from "uuid";
 const RecentEvent = () => {
   const { data, isLoading, isError } = useRecentEvents();
   if (isLoading) {
@@ -16,10 +17,10 @@ const RecentEvent = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 mt-24   justify-items-center items-center">
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 ">
-        {images.map((image, index) => {
+        {images.map(({ image }: any) => {
           return (
-            <div key={index}>
-              <img src={image?.image} alt={title} />
+            <div key={uuidv4()}>
+              <img src={image} alt={title} />
             </div>
           );
         })}

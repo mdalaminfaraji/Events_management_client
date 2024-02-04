@@ -21,7 +21,7 @@ const PricingPlan = () => {
         >
           <div className="flex justify-between items-center">
             <div>
-              <img src="/src/assets/price_plan/standard.png" />
+              <img src="/assets/price_plan/standard.png" />
             </div>
             <p className="text-5xl text-[#F249C8] font-bold ">$21</p>
           </div>
@@ -91,7 +91,7 @@ const PricingPlan = () => {
         >
           <div className="flex justify-between items-center">
             <div>
-              <img src="/src/assets/price_plan/premium.png" />
+              <img src="/assets/price_plan/premium.png" />
             </div>
             <p className="text-5xl text-[#0B63E5] font-bold ">$49</p>
           </div>
@@ -156,7 +156,7 @@ const PricingPlan = () => {
         >
           <div className="flex justify-between items-center">
             <div>
-              <img src="/src/assets/price_plan/standard.png" />
+              <img src="/assets/price_plan/standard.png" />
             </div>
             <p className="text-5xl text-[#E54545] font-bold ">$124</p>
           </div>

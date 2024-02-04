@@ -26,18 +26,22 @@ type Tservices = {
 };
 
 interface ServiceFormProps {
-  service: {
-    id: string;
-    title: string;
-    description: string;
-    features: string[];
-    servicesImage: File | null;
-  };
+  id: string;
+  title: string;
+  description: string;
+  features: string[];
+  servicesImage: File | null;
 }
 
 const OurServiceList = () => {
   const [open, setOpen] = useState(false);
-  const [service, setService] = useState<ServiceFormProps | null>(null);
+  const [service, setService] = useState<ServiceFormProps>({
+    id: "",
+    title: "",
+    description: "",
+    features: [],
+    servicesImage: null,
+  });
 
   const queryClient = useQueryClient();
   const mutation = useMutation({
@@ -77,12 +81,19 @@ const OurServiceList = () => {
   }
 
   const handleEdit = (id: number) => {
-    setService(null);
+    setService({
+      id: "",
+      title: "",
+      description: "",
+      features: [],
+      servicesImage: null,
+    });
 
     const service = Services?.data.find((item: any) => item.id === id);
-    setService(service);
-
-    setOpen(true);
+    if (service) {
+      setService(service);
+      setOpen(true);
+    }
   };
 
   const handleDelete = (id: number) => {
@@ -117,12 +128,12 @@ const OurServiceList = () => {
   };
 
   return (
-    <div className="overflow-x-auto">
+    <div className="">
       <h1 className="text-center text-2xl py-2">Available Services</h1>
       <div className="text-right pr-4">
         <AddServiceDialog />
       </div>
-      <Table>
+      <Table className="w-[700px] md:w-[1000px] lg:w-[1200px] overflow-x-auto mx-auto mt-3">
         <TableHeader className="bg-black ">
           <TableRow className="text-white">
             <TableHead className="w-[100px] text-white">ServiceID</TableHead>

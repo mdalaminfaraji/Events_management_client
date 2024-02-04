@@ -20,7 +20,7 @@ const Testimonial = () => {
         <div className="max-w-[513px] h-[312px] border-2 rounded-2xl p-10 bg-[#3461FF] font-roboto">
           <div className="flex ">
             <div className="w-[85px] h-[85px] rounded-full mr-4">
-              <img src="/src/assets/testimonial/t1.png" />
+              <img src="/assets/testimonial/t1.png" />
             </div>
             <div>
               <h1 className="text-white text-2xl font-[500]">Amelia Joseph</h1>
@@ -36,7 +36,7 @@ const Testimonial = () => {
         <div className="max-w-[513px] h-[312px] border-2 rounded-2xl p-10 bg-[#F8F9FF] font-roboto">
           <div className="flex">
             <div className="w-[85px] h-[85px] rounded-full mr-4">
-              <img src="/src/assets/testimonial/t2.png" />
+              <img src="/assets/testimonial/t2.png" />
             </div>
             <div>
               <h1 className=" text-2xl font-[500]">Amelia Joseph</h1>
@@ -52,7 +52,7 @@ const Testimonial = () => {
         <div className="max-w-[513px] h-[280px] border-2 rounded-2xl p-10 bg-[#F8F9FF] font-roboto ">
           <div className="flex">
             <div className="w-[85px] h-[85px] rounded-full mr-4">
-              <img src="/src/assets/testimonial/t3.png" />
+              <img src="/assets/testimonial/t3.png" />
             </div>
             <div>
               <h1 className=" text-2xl font-[500]">Amelia Joseph</h1>
