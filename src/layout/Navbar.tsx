@@ -8,6 +8,13 @@ const Navbar = () => {
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className="bg-hero-bg w-full py-6 px-6 sm:px-20">
       <nav>
@@ -43,26 +50,30 @@ const Navbar = () => {
             </button>
           </div>
           <ul className="hidden lg:flex  space-x-5 text-base gap-2">
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/about">About</NavLink>
-            <NavLink to="/">Contact</NavLink>
+            <NavLink to="/" onClick={() => scrollToSection("home")}>
+              Home
+            </NavLink>
+            <NavLink to="/" onClick={() => scrollToSection("home")}>
+              About
+            </NavLink>
+            <NavLink to="/" onClick={() => scrollToSection("contact")}>
+              Contact
+            </NavLink>
             <NavLink to="/dashboard">Dashboard</NavLink>
           </ul>
         </div>
         {isOpen && (
           <div className="lg:hidden mt-4">
-            <a href="#" className="block  py-2">
+            <NavLink to="/" onClick={() => scrollToSection("home")}>
               Home
-            </a>
-            <a href="#" className="block  py-2">
+            </NavLink>
+            <NavLink to="/" onClick={() => scrollToSection("home")}>
               About
-            </a>
-            <a href="#" className="block  py-2">
-              Services
-            </a>
-            <a href="#" className="block  py-2">
+            </NavLink>
+            <NavLink to="/" onClick={() => scrollToSection("contact")}>
               Contact
-            </a>
+            </NavLink>
+            <NavLink to="/dashboard">Dashboard</NavLink>
           </div>
         )}
       </nav>

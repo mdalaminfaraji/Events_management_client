@@ -1,7 +1,22 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 const OurClient = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000, // Animation duration
+      once: true, // Whether animation should only happen once while scrolling down the page
+      easing: "ease-out", // Easing function for the animation
+    });
+  }, []); // Run once after the component mounts
   return (
-    <div className="bg-neutral-50 pt-16 pb-32">
-      <h1 className="text-4xl md:text-6xl mx-auto font-roboto font-extrabold capitalize w-96 md:w-[556px] pb-16">
+    <div
+      data-aos="fade-up"
+      data-aos-anchor-placement="center-bottom"
+      className="bg-neutral-50 pt-16 pb-32"
+    >
+      <h1 className="text-4xl md:text-6xl mx-auto font-roboto font-extrabold capitalize max-w-96 md:max-w-[556px] pb-16 text-center">
         Our Valuable client
       </h1>
       <div className="grid grid-cols-4 md:grid-cols-6  lg:grid-cols-10 gap-y-20 justify-items-center">

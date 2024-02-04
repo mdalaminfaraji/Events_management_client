@@ -16,7 +16,7 @@ const PricingPlan = () => {
       </p>
       <div className="mt-[106px] grid grid-cols-1  lg:grid-cols-3 gap-4 justify-items-center font-[Inter] ">
         <div
-          className="w-[412px] h-[748px] py-8 pl-8 pr-5    rounded-[20px] shadow bg-[#FFF]  relative"
+          className="w-[350px] sm:w-[412px] h-[748px] py-8 pl-8 pr-5    rounded-[20px] shadow bg-[#FFF]  relative"
           style={{ borderTop: "6px solid #F249C8" }}
         >
           <div className="flex justify-between items-center">
@@ -37,7 +37,7 @@ const PricingPlan = () => {
             <span className="mr-3"> Get this package </span>
             <ArrowRight />
           </Button>
-          <hr className="mt-10 mb-8  w-[412px] h-[1px] opacity-70 bg-[#E6E8EC] -ml-8 -mr-5 border" />
+          <hr className="mt-10 mb-8 w-[350px] sm:w-[412px] h-[1px] opacity-70 bg-[#E6E8EC] -ml-8 -mr-5 border" />
           <div className="flex items-center">
             <BsCheck className="w-6 h-6 bg-[#E7F5E8] rounded-full text-[#6FCF97]  text-[10px]" />
             <span className="ml-2 text-base font-normal">User Dashboard</span>
@@ -86,7 +86,7 @@ const PricingPlan = () => {
           </div>
         </div>
         <div
-          className="w-[412px] h-[748px] py-8 pl-8 pr-5    rounded-[20px] shadow bg-[#FFF]  relative"
+          className="w-[350px] sm:w-[412px] h-[748px] py-8 pl-8 pr-5    rounded-[20px] shadow bg-[#FFF]  relative"
           style={{ borderTop: "6px solid #0B63E5" }}
         >
           <div className="flex justify-between items-center">
@@ -104,7 +104,7 @@ const PricingPlan = () => {
             <span className="mr-3"> Get this package </span>
             <ArrowRight />
           </Button>
-          <hr className="mt-10 mb-8  w-[412px] h-[1px] opacity-70 bg-[#E6E8EC] -ml-8 -mr-5 border" />
+          <hr className="mt-10 mb-8 w-[350px] sm:w-[412px] h-[1px] opacity-70 bg-[#E6E8EC] -ml-8 -mr-5 border" />
           <div className="flex items-center">
             <BsCheck className="w-6 h-6 bg-[#E7F5E8] rounded-full text-[#6FCF97]  text-[10px]" />
             <span className="ml-2 text-base font-normal">User Dashboard</span>
@@ -151,7 +151,7 @@ const PricingPlan = () => {
           </div>
         </div>
         <div
-          className="w-[412px] h-[748px] py-8 pl-8 pr-5    rounded-[20px] shadow bg-[#FFF]  relative"
+          className="w-[350px] sm:w-[412px] h-[748px] py-8 pl-8 pr-5    rounded-[20px] shadow bg-[#FFF]  relative"
           style={{ borderTop: "6px solid #E54545" }}
         >
           <div className="flex justify-between items-center">
@@ -171,7 +171,7 @@ const PricingPlan = () => {
             <span className="mr-3"> Get this package </span>
             <ArrowRight />
           </Button>
-          <hr className="mt-10 mb-8  w-[412px] h-[1px] opacity-70 bg-[#E6E8EC] -ml-8 -mr-5 border" />
+          <hr className="mt-10 mb-8 w-[350px] sm:w-[412px] h-[1px] opacity-70 bg-[#E6E8EC] -ml-8 -mr-5 border" />
           <div className="flex items-center">
             <BsCheck className="w-6 h-6 bg-[#E7F5E8] rounded-full text-[#6FCF97]  text-[10px]" />
             <span className="ml-2 text-base font-normal">User Dashboard</span>

@@ -27,7 +27,9 @@ const OurServices = () => {
 
   return (
     <div className="font-roboto ">
-      <h1 className="w-96 mx-auto text-6xl font-bold ">Our Services</h1>
+      <h1 className="w-80 text-5xl text-center sm:w-96 mx-auto sm:text-6xl font-bold ">
+        Our Services
+      </h1>
       <p className="text-center max-w-[700px] mx-auto mt-3 text-lg text-[#566B84]">
         Ut posuere felis arcu tellus tempus in in ultricies. Gravida id nibh
         ornare viverra. Ultrices faucibus neque velit risus ac id lorem.
@@ -42,7 +44,7 @@ const OurServices = () => {
             ) => (
               <div
                 key={uuidv4()}
-                className={`w-[412px] h-[569px] p-6 rounded-md bg-gradient-to-tr ${
+                className={`w-[340px] sm:w-[412px] h-[569px] p-6 rounded-md bg-gradient-to-tr ${
                   index == 0
                     ? `from-[#EDDDF1] to-[#efebef]`
                     : index == 1
@@ -60,7 +62,10 @@ const OurServices = () => {
                     </p>
                   </>
                 ) : (
-                  <img src={servicesImage} className="w-[362px] h-[253px]" />
+                  <img
+                    src={servicesImage}
+                    className="w-[300px] sm:w-[362px] h-[253px]"
+                  />
                 )}
                 {hoveredItem && hoveredItem.title === title ? (
                   ""
