@@ -21,6 +21,28 @@ You can check out the live demo of this project [here](https://65be959592a933c9e
 
 You can check out the live demo of this project [here](https://events-management-nsnv.onrender.com/).
 
+## Api EndPoint
+
+### EventItem
+
+GET: https://events-management-nsnv.onrender.com/api/eventItem/
+POST: https://events-management-nsnv.onrender.com/api/eventItem/
+body: {
+title:"",
+image:file,
+}
+
+PUT: https://events-management-nsnv.onrender.com/api/eventItem/2/
+DELETE: https://events-management-nsnv.onrender.com/api/eventItem/2/
+
+### OurServices
+
+GET, POST, PUT, DELETE: https://events-management-nsnv.onrender.com/api/services/
+
+### RecentEvents
+
+GET, POST, PUT, DELETE: https://events-management-nsnv.onrender.com/api/events/
+
 ## https://github.com/programming-hero-web-course1/l2-b2-assignment-5-simple-backend-mdalaminfaraji
 
 ## Features
