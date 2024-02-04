@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { LayoutDashboard } from "lucide-react";
+import { GanttChartSquareIcon, HandPlatter } from "lucide-react";
 
 import { NavLink } from "react-router-dom";
 
@@ -22,8 +22,8 @@ const Sidebar = () => {
             )
           }
         >
-          <LayoutDashboard className="shrink-0" />
-          <span className="truncate"> Our Service</span>
+          <HandPlatter className="shrink-0" />
+          <span className="truncate font-bold"> Our Service</span>
         </NavLink>
         <NavLink
           to="/dashboard/event-items"
@@ -36,22 +36,8 @@ const Sidebar = () => {
             )
           }
         >
-          <LayoutDashboard className="shrink-0" />
-          <span className="truncate">Event Items</span>
-        </NavLink>
-        <NavLink
-          to="/dashboard/event-items"
-          className={({ isActive }) =>
-            cn(
-              "p-3 bg-gray rounded-md hover:bg-gray-700 hover:text-white transition-all flex items-center gap-2",
-              {
-                "bg-gray-700 text-white": isActive,
-              }
-            )
-          }
-        >
-          <LayoutDashboard className="shrink-0" />
-          <span className="truncate">Add Service</span>
+          <GanttChartSquareIcon className="shrink-0" />
+          <span className="truncate font-bold">Event Items</span>
         </NavLink>
       </nav>
     </aside>

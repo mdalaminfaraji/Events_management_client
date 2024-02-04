@@ -1,6 +1,6 @@
 import App from "@/App";
 import DashboardLayout from "@/layout/DashboardLayout";
-import EventItemList from "@/pages/dashboard/EventItemList";
+import EventItemList from "@/pages/dashboard/eventItems/EventItemList";
 import OurServiceList from "@/pages/dashboard/OurServiceList";
 import Home from "@/pages/home/Home";
 import { Navigate, createBrowserRouter } from "react-router-dom";

@@ -32,7 +32,7 @@ const EventItems = () => {
         <div className="col-span-3 md:col-span-12 xl:col-span-4 justify-self-center">
           <div className="mb-4 bg-gray-200 p-4">
             <img
-              src={`https://events-management-nsnv.onrender.com/${image1.image}`}
+              src={`https://events-management-nsnv.onrender.com/${image1}`}
               alt={title1}
             />
             <p className="font-semibold text-xl pt-2">{title1}</p>
@@ -41,7 +41,7 @@ const EventItems = () => {
             <div className="bg-gray-300 p-4 col-span-6 justify-self-center">
               {" "}
               <img
-                src={`https://events-management-nsnv.onrender.com/${image3.image}`}
+                src={`https://events-management-nsnv.onrender.com/${image3}`}
                 alt={title3}
               />
               <p className="font-semibold text-xl pt-2">{title3}</p>
@@ -49,7 +49,7 @@ const EventItems = () => {
             <div className="bg-gray-300 p-4 col-span-6 justify-self-center">
               {" "}
               <img
-                src={`https://events-management-nsnv.onrender.com/${image4.image}`}
+                src={`https://events-management-nsnv.onrender.com/${image4}`}
                 alt={title4}
               />
               <p className="font-semibold text-xl pt-2">{title4}</p>
@@ -64,7 +64,7 @@ const EventItems = () => {
             <div>
               {" "}
               <img
-                src={`https://events-management-nsnv.onrender.com/${image2.image}`}
+                src={`https://events-management-nsnv.onrender.com/${image2}`}
                 alt={title2}
               />
               <p className="font-semibold text-xl pt-2">{title2}</p>
@@ -75,7 +75,7 @@ const EventItems = () => {
             <div>
               {" "}
               <img
-                src={`https://events-management-nsnv.onrender.com/${image5.image}`}
+                src={`https://events-management-nsnv.onrender.com/${image5}`}
                 alt={title5}
               />
               <p className="font-semibold text-xl pt-2">{title5}</p>
@@ -87,7 +87,7 @@ const EventItems = () => {
         <div className="col-span-3 md:col-span-12 xl:col-span-4 justify-self-center ">
           <div className="bg-gray-200 p-4">
             <img
-              src={`https://events-management-nsnv.onrender.com/${image6.image}`}
+              src={`https://events-management-nsnv.onrender.com/${image6}`}
               alt={title6}
               className="w-[364px] h-[460px]"
             />

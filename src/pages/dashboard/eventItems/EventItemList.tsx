@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import useOurServices from "@/hooks/useOurServices";
+
 import {
   Table,
   TableBody,
@@ -13,41 +13,37 @@ import { TiEdit } from "react-icons/ti";
 import { v4 as uuidv4 } from "uuid";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
-import AddServiceDialog from "./AddServiceDialog";
+import AddEventItem from "./AddEventItem";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
 
 import { useState } from "react";
-import EditServiceForm from "./EditService";
-type Tservices = {
+import EditEventItemForm from "./EditEventItemForm";
+import useEventsItem from "@/hooks/useEventsItem";
+type TEvent = {
   id: number;
   title: string;
-  features: string[];
 };
 
-interface ServiceFormProps {
+interface EventFormProps {
   id: string;
   title: string;
-  description: string;
-  features: string[];
-  servicesImage: File | null;
+  image: File | null;
 }
 
 const OurServiceList = () => {
   const [open, setOpen] = useState(false);
-  const [service, setService] = useState<ServiceFormProps>({
+  const [event, setEvent] = useState<EventFormProps>({
     id: "",
     title: "",
-    description: "",
-    features: [],
-    servicesImage: null,
+    image: null,
   });
 
   const queryClient = useQueryClient();
   const mutation = useMutation({
     mutationFn: async (id: number) => {
       return await axios.delete(
-        `https://events-management-nsnv.onrender.com/api/services/${id}/`
+        `https://events-management-nsnv.onrender.com/api/eventItem/${id}/`
       );
     },
     onSuccess: () => {
@@ -58,7 +54,7 @@ const OurServiceList = () => {
         showConfirmButton: false,
         timer: 1500,
       });
-      queryClient.invalidateQueries({ queryKey: ["services"] });
+      queryClient.invalidateQueries({ queryKey: ["events_item"] });
     },
     onError: (error) => {
       console.log(error);
@@ -71,7 +67,7 @@ const OurServiceList = () => {
       });
     },
   });
-  const { data: Services, isLoading, isError } = useOurServices();
+  const { data: Events, isLoading, isError } = useEventsItem();
 
   if (isLoading) {
     return <p>Loading...........</p>;
@@ -81,17 +77,16 @@ const OurServiceList = () => {
   }
 
   const handleEdit = (id: number) => {
-    setService({
+    setEvent({
       id: "",
       title: "",
-      description: "",
-      features: [],
-      servicesImage: null,
+
+      image: null,
     });
 
-    const service = Services?.data.find((item: any) => item.id === id);
-    if (service) {
-      setService(service);
+    const eventItem = Events?.data.find((item: any) => item.id === id);
+    if (eventItem) {
+      setEvent(eventItem);
       setOpen(true);
     }
   };
@@ -108,51 +103,33 @@ const OurServiceList = () => {
       confirmButtonText: "Yes, delete it!",
     }).then(async (result) => {
       if (result.isConfirmed) {
-        // await axios
-        //   .delete(
-        //     `https://events-management-nsnv.onrender.com/api/services/${id}/`
-        //   )
-        //   .then((data) => {
-        //     console.log(data);
-        //   });
-
         mutation.mutate(id);
-
-        // Swal.fire({
-        //   title: "Deleted!",
-        //   text: "Your file has been deleted.",
-        //   icon: "success",
-        // });
       }
     });
   };
 
   return (
     <div className="">
-      <h1 className="text-center text-2xl py-2">Available Services</h1>
+      <h1 className="text-center text-2xl py-2">Available EventItems</h1>
       <div className="text-right pr-4">
-        <AddServiceDialog />
+        <AddEventItem />
       </div>
-      <Table className="w-[400px] sm:w-[500px] md:w-[800px] lg:w-[1000px] xl:w-[1200px] 2xl:w-full  overflow-x-auto mx-auto mt-3">
+      <Table className="w-[400px] sm:w-[500px] md:w-[800px] lg:w-[1000px] xl:w-[1200px] 2xl:w-full overflow-x-auto mx-auto mt-3">
         <TableHeader className="bg-black ">
           <TableRow className="text-white">
-            <TableHead className="w-[100px] text-white">ServiceID</TableHead>
+            <TableHead className="w-[100px] text-white">EventID</TableHead>
             <TableHead className="text-white">Title</TableHead>
-            <TableHead className="text-white">features</TableHead>
+
             <TableHead className="text-right text-white">Action</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody className="overflow-x-auto">
-          {Services?.data?.map(({ id, title, features }: Tservices) => {
+          {Events?.data?.map(({ id, title }: TEvent) => {
             return (
               <TableRow key={uuidv4()}>
                 <TableCell className="font-medium">#{id}</TableCell>
                 <TableCell>{title}</TableCell>
-                <TableCell>
-                  {features.map((item) => {
-                    return <p key={uuidv4()}>{item}</p>;
-                  })}
-                </TableCell>
+
                 <TableCell className="text-right">
                   <Button
                     variant="secondary"
@@ -180,7 +157,7 @@ const OurServiceList = () => {
             <div className="relative w-auto  mx-auto max-w-5xl">
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full  bg-white outline-none focus:outline-none">
                 <div className="flex items-start justify-between p-3   border border-solid rounded-t-lg  border-gray-300  ">
-                  <h3 className="text-3xl font-semibold ">Edit Service</h3>
+                  <h3 className="text-3xl font-semibold ">Edit Event</h3>
                   <button
                     className="bg-transparent border-0 text-black float-right"
                     onClick={() => setOpen(false)}
@@ -191,7 +168,7 @@ const OurServiceList = () => {
                   </button>
                 </div>
                 <div className="relative flex-auto  container mx-auto pt-5 border  px-16 bg-opacity-100   py-5">
-                  <EditServiceForm service={service} />
+                  <EditEventItemForm event={event} />
                 </div>
               </div>
             </div>
